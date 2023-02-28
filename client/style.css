@@ -1,0 +1,32 @@
+@import "./submitButton.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: rgb(255, 225, 0);
+}
+
+form {
+   padding-top: 25rem;
+   padding-left: 25rem;
+}
+
+label {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+}
+
+input {
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.ideaInput {
+    min-width: 40%;
+    font-size: 1.7vw;
+}
