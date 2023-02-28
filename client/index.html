@@ -5,10 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
+    <script type="module" src="./fetchAPI.js" defer></script>
     <title>Brilliant Ideas</title>
 </head>
 <body>
-    <h1>Brilliant Ideas</h1>
-    <button> Show all inserted ideas!</button>
+    <main>
+        <h1>Brilliant Ideas</h1>
+        <form id="showIdeaList" action="./createPage.html">
+            <a class="button button--piyo" href="javascript:{}" onclick="document.getElementById('showIdeaList').submit();">
+                <div class="button__wrapper">
+                    <span class="button__text">Create idea!</span>
+                </div>
+                <div class="characterBox">
+                    <div class="character wakeup">
+                        <div class="character__face"></div>
+                    </div>
+                    <div class="character wakeup">
+                        <div class="character__face"></div>
+                    </div>
+                    <div class="character">
+                        <div class="character__face"></div>
+                    </div>
+                </div>
+            </a>
+        </form>
+        <div class="ideaContainer">
+
+        </div>
+    </main>
 </body>
 </html>
