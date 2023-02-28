@@ -1,3 +1,5 @@
+@import "./submitButton.css";
+
 * {
     margin: 0;
     padding: 0;
@@ -7,3 +9,65 @@
 body {
     background-color: rgb(255, 225, 0);
 }
+
+h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin-top: 5rem;
+}
+
+form {
+    cursor: pointer;
+    margin-top: 25rem;
+    margin-left: 30rem;
+}
+
+.ideaContainer {
+    width: 50%;
+    background-color: rgb(15, 112, 119);
+    margin-left: 10rem;
+    margin-top: -20rem;
+    min-height: 60vh;
+    max-height: 60vh;
+    border: 5px solid black;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.3rem;
+    overflow: scroll;
+}
+
+.ideaContainer h3 {
+    margin-left: 26rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.timestamp{
+    float: right;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+}
+
+/*scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    max-height: 30px;
+    border-radius: 10px;
+    padding-right: 1rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: rgb(15, 112, 119); 
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: white; 
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background-color: rgb(15, 112, 119); 
+  }
