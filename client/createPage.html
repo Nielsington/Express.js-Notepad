@@ -9,10 +9,10 @@
 </head>
 <body>
     <main>
-        <form method="post" action="../server/server.js">
-            <label for="idea">Enter idea:</label><br>
-            <input class="ideaInput" type="text" name="idea">
-            <a class="button button--piyo" href="javascript:{}" onclick="document.getElementById('my_form').submit();">
+        <form id="ideaForm" method="post" action="http://localhost:3000/submit-idea">
+            <label for="ideaInput">Enter idea:</label><br>
+            <input class="ideaTitle" type="text" name="ideaTitle">
+            <a class="button button--piyo" href="javascript:{}" onclick="document.getElementById('ideaForm').submit();">
                 <div class="button__wrapper">
                     <span class="button__text">Submit</span>
                 </div>
@@ -27,7 +27,9 @@
                         <div class="character__face"></div>
                     </div>
                 </div>
-            </a>
+            </a><br>
+            <label for="ideaDescription">Enter: description </label><br>
+            <textarea class="ideaDescription" name="ideaDescription" rows="10" cols="50"></textarea>
         </form>
     </main>
 </body>
