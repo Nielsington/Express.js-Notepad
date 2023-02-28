@@ -12,7 +12,7 @@ body {
 }
 
 form {
-   padding-top: 25rem;
+   padding-top: 5rem;
    padding-left: 25rem;
 }
 
@@ -26,7 +26,26 @@ input {
     margin-top: 1rem;
 }
 
-.ideaInput {
-    min-width: 40%;
-    font-size: 1.7vw;
+.ideaTitle {
+    width: 40%;
+    max-width: 40%;
+    font-size: 1.5vw;
+    border: 2px solid black;
+}
+
+.ideaDescription {
+    width: 40%;
+    max-width: 40%;
+    border-radius: 10px;
+    border: 2px solid black;
+    font-size: 1.5vw;
+    margin-top: 1rem;
+}
+
+.button {
+    margin-top: 5rem;
+}
+
+.description {
+    height: 100px;
 }
