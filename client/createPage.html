@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Brilliant Ideas</title>
+</head>
+<body>
+    <main>
+        <form method="post" action="../server/server.js">
+            <label for="idea">Enter idea:</label><br>
+            <input class="ideaInput" type="text" name="idea">
+            <a class="button button--piyo" href="javascript:{}" onclick="document.getElementById('my_form').submit();">
+                <div class="button__wrapper">
+                    <span class="button__text">Submit</span>
+                </div>
+                <div class="characterBox">
+                    <div class="character wakeup">
+                        <div class="character__face"></div>
+                    </div>
+                    <div class="character wakeup">
+                        <div class="character__face"></div>
+                    </div>
+                    <div class="character">
+                        <div class="character__face"></div>
+                    </div>
+                </div>
+            </a>
+        </form>
+    </main>
+</body>
+</html>
