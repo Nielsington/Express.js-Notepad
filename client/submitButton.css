@@ -13,14 +13,14 @@
     justify-content : center ;
     align-items : center ;
     max-width : 25%;
-    height : 4vh ;
+    height : 4.5vh ;
     text-decoration : none ;
     border : solid 3px #000 ;
     border-radius : 40px ;
     background : var(--main_color) ;
     font-family: 'Fredoka One', cursive;
-    margin-left: 50rem;
-    margin-top: -4vh;
+    margin-left: 40rem;
+    margin-top: -20vh;
 }
 
 .button::before{
@@ -120,8 +120,6 @@
 .character__face::after{
     right : -5px ;
 }
-
-
 
 .button__wrapper::before,
 .button__wrapper::after{
