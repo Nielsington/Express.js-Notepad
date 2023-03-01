@@ -2,17 +2,12 @@ import dotenv from 'dotenv';
 import mariadb from 'mariadb';
 import express from 'express';
 import cors from 'cors';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
 
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT;
 const dbName = process.env.DB_NAME;
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
@@ -54,7 +49,6 @@ app.get('/ideas', async (req, res) => {
     try {
         connection = await pool.getConnection();
         const data2 = await connection.query(`SELECT * FROM ${dbName}.ideas`);
-        console.log(data2);
         res.send(data2);
     } catch(err) {
         throw err;
@@ -62,6 +56,20 @@ app.get('/ideas', async (req, res) => {
         if (connection) connection.end();
     }
 });
+
+app.get('/delete-row/:id', async (req, res) => {
+    let connection;
+    const idParam = req.params.id;
+    try {
+        connection = await pool.getConnection();
+        const deleteRow = await connection.query(`DELETE FROM ${dbName}.ideas WHERE id=?`, [idParam]);
+
+    }catch(err){
+        throw err
+    }finally{
+        if (connection) connection.end();
+    }
+})
 
 app.listen(port, (req, res) => {
     console.log('http://localhost:3000');
