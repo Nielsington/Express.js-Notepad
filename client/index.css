@@ -27,7 +27,7 @@ form {
     width: 50%;
     background-color: rgb(15, 112, 119);
     margin-left: 10rem;
-    margin-top: -20rem;
+    margin-top: -13rem;
     min-height: 60vh;
     max-height: 60vh;
     border: 5px solid black;
@@ -38,15 +38,27 @@ form {
 }
 
 .ideaContainer h3 {
-    margin-left: 26rem;
-    margin-top: 3rem;
+    margin-left: 20rem;
+    margin-top: 2rem;
     margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.trashCan {
+    width: 30px;
+    float:right;
+    margin-top: 1rem;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+.ideaContainer p {
+    margin-left: 1rem;
 }
 
 .timestamp{
     float: right;
     font-size: 1rem;
-    margin-top: 1.5rem;
 }
 
 /*scrollbar */
