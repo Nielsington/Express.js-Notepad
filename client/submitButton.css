@@ -19,8 +19,8 @@
     border-radius : 40px ;
     background : var(--main_color) ;
     font-family: 'Fredoka One', cursive;
-    margin-left: 40rem;
-    margin-top: -20vh;
+    margin-left: 50rem;
+    margin-top: -10vh;
 }
 
 .button::before{
