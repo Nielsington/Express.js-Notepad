@@ -60,6 +60,7 @@ app.get('/ideas', async (req, res) => {
 app.get('/delete-row/:id', async (req, res) => {
     let connection;
     const idParam = req.params.id;
+
     try {
         connection = await pool.getConnection();
         const deleteRow = await connection.query(`DELETE FROM ${dbName}.ideas WHERE id=?`, [idParam]);
@@ -71,6 +72,44 @@ app.get('/delete-row/:id', async (req, res) => {
     }
 })
 
-app.listen(port, (req, res) => {
+app.get('/edit-idea/:id', async (req, res) => {
+    let connection;
+    const idParam = req.params.id;
+
+    try {
+        connection = await pool.getConnection();
+        const updateRow = await connection.query(`SELECT title, description FROM ${dbName}.ideas WHERE id= ?`, [idParam]);
+        res.send(updateRow);
+    }catch(err){
+        throw err
+    }finally{
+        if (connection) connection.end();
+    }
+    
+})
+
+app.post('/update-idea/:id', async (req,res) =>{
+    let connection;
+    const ideaTitle = req.body.editTitle;
+    const ideaDescription = req.body.editDescription;
+    const idParam = req.params.id;
+    console.log('Yo drerrie');
+    try {
+        connection = await pool.getConnection();
+        const deleteRow = await connection.query(
+            `UPDATE ${dbName}.ideas 
+            SET title= ?, description= ?
+            WHERE id= ?`, [ideaTitle, ideaDescription,idParam]
+        );
+        res.redirect('http://127.0.0.1:5500/client/index.html');
+
+    }catch(err){
+        throw err
+    }finally{
+        if (connection) connection.end();
+    }
+})
+
+app.listen(port, () => {
     console.log('http://localhost:3000');
 })
