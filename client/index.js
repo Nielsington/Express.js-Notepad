@@ -20,9 +20,13 @@ for (let idea of apiData){
 
     const title = document.createElement('h3');
     
-    const trashCan = document.createElement('img');
-    trashCan.classList.add('trashCan');
-    trashCan.src = './trash.png';
+    const editIcon = document.createElement('img');
+    editIcon.classList.add('editIcon');
+    editIcon.src = './edit.png';
+
+    const trashCanIcon = document.createElement('img');
+    trashCanIcon.classList.add('trashCanIcon');
+    trashCanIcon.src = './trash.png';
 
     const description = document.createElement('p');
     const createTime = document.createElement('p');
@@ -38,13 +42,14 @@ for (let idea of apiData){
 
     ideaContainer.appendChild(ideaDiv)
     ideaDiv.appendChild(title);
-    ideaDiv.appendChild(trashCan);
+    ideaDiv.appendChild(editIcon);
+    ideaDiv.appendChild(trashCanIcon);
     ideaDiv.appendChild(description);
     ideaDiv.appendChild(createTime);
     ideaDiv.appendChild(linebreak);
     ideaDiv.appendChild(horizontalRule);
 
-    trashCan.addEventListener('click', async(req, res) =>{
+    trashCanIcon.addEventListener('click', async() =>{
         ideaContainer.removeChild(ideaDiv);
         try{
         const response = await fetch(`http://localhost:3000/delete-row/${idea.id}`);
@@ -52,6 +57,10 @@ for (let idea of apiData){
         }catch(err){
             throw err;
         }
+    });
+
+    editIcon.addEventListener('click', async() => {
+        window.location = `http://127.0.0.1:5500/client/updatePage.html?id=${idea.id}`;
     });
 }
 
