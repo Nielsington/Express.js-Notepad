@@ -44,12 +44,16 @@ form {
     display: inline-block;
 }
 
-.trashCan {
+.editIcon, .trashCanIcon {
     width: 30px;
     float:right;
     margin-top: 1rem;
     margin-right: 1.5rem;
     cursor: pointer;
+}
+
+.editIcon {
+    width: 35px;
 }
 
 .ideaContainer p {
@@ -59,27 +63,28 @@ form {
 .timestamp{
     float: right;
     font-size: 1rem;
+    margin-right: 1rem;
 }
 
 /*scrollbar */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
     max-height: 30px;
     border-radius: 10px;
     padding-right: 1rem;
-  }
+}
 
-  ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background-color: rgb(15, 112, 119); 
     margin-top: 10px;
     margin-bottom: 10px;
-  }
+}
 
-  ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: white; 
     border-radius: 10px;
-  }
+}
 
-  ::-webkit-scrollbar-corner {
+::-webkit-scrollbar-corner {
     background-color: rgb(15, 112, 119); 
-  }
+}
